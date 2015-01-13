@@ -1,0 +1,543 @@
+\documentclass[12pt,a4j]{jarticle}
+\usepackage{amsfonts,amsmath,amsthm,amssymb,txfonts,color,graphicx,fancybox,comment,here}
+% sibfigureが使いたい場合はもう少し後で読み込む
+
+%%----和田研究室用スタイル
+%必須標準スタイル
+\usepackage{wadalab}
+\pagestyle{wdheadings}
+%数式や図の番号に章番号を付加
+\usepackage{withChapterNum}
+%%ここまで和田研----
+
+%% subfigure はここで読み込む（withChapterNumより先に読み込んだ場合，\refした時に章番号が無くなります）
+%\usepackage{subfigure}
+
+
+\renewcommand{\topfraction}{.85}
+\renewcommand{\bottomfraction}{.60}
+\renewcommand{\textfraction}{.15}
+\renewcommand{\floatpagefraction}{.6}
+
+%%-----ここからマクロ定義
+%太字の斜体ベクトルや行列の表現にどうぞ
+\def\Vec#1{\mbox{\boldmath $#1$}}
+
+%誰かあとここに、微分記号とか追加してくれないだろうか
+%%ここまでマクロ定義-----
+
+%%-----ここからタイトルとヘッダ
+\title{電源外付型スイッチングハブの
+伝導性妨害波伝達特性測定}
+
+\date{2014.11.20}
+
+\author{B4 松田光志}
+%groupの書式 {著者イニシャル}/{資料シリーズ名}{発行年度}-{資料番号}({改訂回数})
+\group{MK/MKCOND14-008(1)}
+
+\wdheading
+%%ここまでタイトルとヘッダ-----
+
+%%----以下本文----
+\begin{document}
+\maketitle
+\begin{abstract}
+妨害波の伝達箇所を特定することなどを目的として、電源外付け型のスイッチングハブを測定対象とし、
+ACアダプタ部分のみと、スイッチングハブ部分のみのそれぞれについて、電源から印加された伝導性妨害波の伝達特性を測定した。ACアダプタ部分では、電源線のコモンモードから通信線のディファレンシャルモードへは最大でも$-$30 dB、コモンモードへは$-$20 dB程度であった。それに対して、スイッチングハブ部分では、すべてのモードの伝達特性および変換特性が$-$6 dB程度となり、非常に強い結合があることが推測できた。
+
+また、電源回路とスイッチングハブそれぞれの伝達特性(Sパラメータ)を接続し、系全体のSパラメータを表す式を導出した。今後は、これを用いて系全体のSパラメータとの比較を行なう予定である。
+\end{abstract}
+
+\section{ACアダプタ型のスイッチングハブに対する伝導性妨害波の評価について}
+\subsection{目的}
+先行研究および以前の報告では、電源内蔵型のスイッチングハブに対して、図\ref{block1}のような実験系により電源から印加された伝導性妨害波の伝達特性を測定した\cite{past}。
+
+\begin{figure}[tb]
+  \begin{center}
+   \includegraphics[width=100mm]{blockzunaizou}
+  \end{center}
+	\label{block1}
+    \caption{内蔵型スイッチングハブの測定系(ブロック図)}
+\label{block1}
+\end{figure}
+
+今回は、妨害波の伝達箇所を特定するために、電源外付け型のスイッチングハブ外付け電源であるACアダプタ部分(以下、ACアダプタ部分と呼ぶ)とそれ以外の部分(以下、スイッチングハブ部分と呼ぶ)に分離する。
+\begin{enumerate}
+ \item ACアダプタ部分
+ \item スイッチングハブ部分
+ \item ACアダプタおよびスイッチングハブからなる系全体
+\end{enumerate}
+その上で、1,2について妨害波伝達特性の測定系をそれぞれ提案し、測定結果を提示する。今後、図\ref{block2}の様な実験系を用いて3について測定し、得られた1,2の特性を合成したものと比較することで検証する。
+
+
+\begin{figure}[htb]
+  \begin{center}
+   \includegraphics[width=100mm]{blockzugaibu}
+  \end{center}
+    \caption{ACアダプタ型スイッチングハブの測定系(ブロック図)}
+\label{block2}
+\end{figure}
+
+
+\section{ACアダプタ部分の伝導性妨害波特性について}
+\subsection{測定系}
+
+\begin{figure}[tb]
+  \begin{center}
+   \includegraphics[width=150mm]{acmosikii}
+  \end{center}
+\label{acmosiki}
+    \caption{ACアダプタ部分の妨害波伝達特性の測定系（概略図）}
+\end{figure}
+
+
+\subsubsection{ACアダプタのAC側}
+ACアダプタ(1.0A, 5.3V)の入力側はCDNE(Teseq M210)に接続し、CDNEの測定ポートは同軸ケーブルを介してベクトルネットワークアナライザ(Agilent E5017C)のポート1を接続する。入力側のコモンモード電流を低減させるために、同軸ケーブル上に、システムグラウンドに垂直にフェライトクランプ(鹿島 FC22)を配置する。フェライトクランプはシステムグラウンドに垂直に配置する。CDNEのAEポートは、商用電源に接続する。
+
+\subsubsection{ACアダプタのDC側}
+ACアダプタの出力側は銅板を介して1線ずつ、2つのBIASTEE(Picosecond MODEL5545)に接続する。 BIASTEEのDC端子間には負荷として抵抗$R_0$を挿入する。また、RF端子にはベクトルネットワークアナライザのポート2,3をそれぞれ同軸ケーブルにより接続する。
+BIASTEEを用いる理由は2つある。一方はベクトルネットワークアナライザのポートにDCを入力させないため、もう他方は出力側のディファレンシャルモード電流を調整するためである。
+
+
+\begin{figure}[tb]
+  \begin{center}
+   \includegraphics[width=150mm]{acput}
+  \end{center}
+    \caption{ACアダプタの測定系(側面からの配置図)}
+\label{acput}
+\end{figure}
+
+
+\begin{table}[!h]
+  \begin{center}
+    \caption{ネットワークアナライザの設定}
+  \begin{tabular}{|c|c|} \hline
+       出力電力（output power）   &  0dBm   \\ \hline
+      sweep type & log scale \\ \hline
+     sweep point & 1601 \\ \hline 
+      測定周波数帯 & 1MHz-500MHz \\ \hline
+      IF Band Width & 100Hz \\   \hline
+  \end{tabular}
+  \end{center}
+\end{table}
+
+\subsubsection{高さ(システムグラウンドからの距離)について}
+伝送特性を安定させるため、電源ケーブルおよびACアダプタ、BIASTEEはシステムグラウンドから高さ100 mmの箇所に配置した。電源ケーブルは2本が非対称にならないよう、それぞれのシステムグラウンドからの高さを100 mmにした。CDNEは銅板により治具を作成し、システムグラウンドと低インピーダンスで接続しながらも他の機器と同じ100[mm]の高さに配置した。
+
+\subsubsection{各線長さについて}
+実際に測定した範囲は1-500 MHzであるが、今回用いたCDNEの測定範囲周波数帯は30から300 MHzである。300 MHzの妨害波の波長は1 mであり、電源ケーブルを伝送線路とみなさないためにはケーブル長をその$1/20$程度に収える必要があるとされる。すなわち、今回は50 mm以下にすることが求められる。今回の実験では、図\ref{acline1}のように、ACアダプタの電線は40 mmとした。また、\ref{acline2}図に示すとおり銅板とBIASTEEは直接接続し、BIASTEEと抵抗$R_0$は10 mmの導線により接続した。
+
+
+\subsubsection{終端条件について}
+入力側については、CDNEによって終端条件が定められる。
+\begin{itemize}
+\item{ディファレンシャルモード} ： CDNEによって、100$\Omega$終端となる。
+\item{}コモンモード ： CDNEによって、150$\Omega$終端となる。
+\end{itemize}
+
+DC側については、50$\Omega$系で測定しているため、
+\begin{itemize}
+ \item ディファレンシャルモード： 100 $\Omega$
+ \item コモンモード： 25 $\Omega$
+\end{itemize}
+となる。
+
+
+
+
+\begin{figure}[tb]
+ \begin{minipage}{0.6\hsize}
+  \begin{center}
+   \includegraphics[width=90mm]{acline1}
+\label{acline1}
+  \end{center}
+    \caption{実際の配線図(ACアダプタ周辺)}
+ \end{minipage}
+ \begin{minipage}{0.6\hsize}
+  \begin{center}
+   \includegraphics[width=90mm]{acline2}
+  \end{center}
+\label{acline2}
+    \caption{実際の配線図(BIASTEE周辺)}
+ \end{minipage}
+\end{figure}
+
+\subsection{測定結果}
+\subsubsection{給電・無給電の比較}
+CDNEのAEポートは商用電源に接続せず、まずは無給電の状態について測定し、その後接続して給電した状態を測定した。これらを比較することでモード変換の発生に関して、半導体回路部分が支配的か、寄生結合が支配的かを判断する。
+
+
+\begin{figure}[tb]
+ \begin{minipage}{0.6\hsize}
+  \begin{center}
+   \includegraphics[width=90mm]{SUPPLY_SCS}
+  \end{center}
+	\caption{給電・無給電時のScs(R0=51$\Omega$)}
+ \end{minipage}
+ \begin{minipage}{0.6\hsize}
+  \begin{center}
+   \includegraphics[width=90mm]{SUPPLY_SDS}
+  \end{center}
+	\caption{給電・無給電時のSds(R0=51$\Omega$)}
+ \end{minipage}
+\end{figure}
+
+\begin{figure}[tb]
+ \begin{minipage}{0.6\hsize}
+  \begin{center}
+   \includegraphics[width=90mm]{other}
+  \end{center}
+	\caption{給電・無給電時のScs(R0=150$\Omega$)}
+ \end{minipage}
+ \begin{minipage}{0.6\hsize}
+  \begin{center}
+   \includegraphics[width=90mm]{SUPPLY2}
+  \end{center}
+	\caption{給電・無給電時のSds(R0=150$\Omega$)}
+ \end{minipage}
+\end{figure}
+
+結果：黒い点線が無給電時、ピンクの実線が給電時を表している。Scsでは両者に違いは見られなかった。Sdsについて、$R_0=51\Omega$のときは5MHz以上の周波数帯で給電時が大きい。また、$R_0=150\Omega$は概ね同じ特性であったが、ピークとなる周波数が100MHz異なった。
+
+
+\subsubsection{$R_0$の値の比較}
+$R_0$の値を51$\Omega$と150$\Omega$と二種類計測し、それぞれの伝達特性を比較することで、ACアダプタの妨害波伝達特性が通過電流依存性を持つか否かについて調査した。
+
+\begin{figure}[tb]
+ \begin{minipage}{0.6\hsize}
+  \begin{center}
+   \includegraphics[width=90mm]{R_SCS}
+  \end{center}
+	\caption{R比較時のScs}
+ \end{minipage}
+ \begin{minipage}{0.6\hsize}
+  \begin{center}
+   \includegraphics[width=90mm]{R_SDS}
+  \end{center}
+	\caption{R比較時のSds}
+ \end{minipage}
+\end{figure}
+
+
+\begin{itemize}
+\item{}$\rm S_{\rm CS}$は-20dB程度の値を示した。Rの値を変えても全く変わらなかった。
+\item{}$\rm S_{DS}$は-40dB程度。(CDNEの動作周波数帯である)30-300MHzにおいては、最高で10dB程度異なった。また、ピークの数が異なっている。
+
+これらのことから、コモンモードへの伝達はACアダプタ内部の回路の寄生結合が支配的であることが推測できる。また、ディファレンシャルモードへの伝達については、回路動作が大きく影響していることが分かった。
+\end{itemize}
+
+
+
+\section{スイッチングハブ部分の伝導性妨害波特性について}
+
+\subsection{測定系}
+スイッチングハブ部分に関して、電源側から入ったノイズが通信側にどの程度伝搬するか、という妨害波特性を測定する。測定系を図\ref{hub1}に示す。DUTの通信線のSTPケーブルのうち、2線を取り出して、RJ45-SMA変換基板と銅板を介してVNAの1,2ポートに接続する。残りの6線は$50\Omega$終端としている。また、電源側は2線それぞれに BIASTEE を接続し、二つのOUT/IN 端子をVNAの3,4 ポートに、また二つのDC端子をDC電源に接続する。BIASTEEは、ベクトルネットワークアナライザに直流成分を印加しないために用いる。
+
+\begin{figure}[tb]
+  \begin{center}
+   \includegraphics[width=150mm]{hubmosikii}
+  \end{center}
+\label{hub1}
+    \caption{スイッチングハブの測定系}
+\end{figure}
+
+3種類の異なるスイッチングハブをそれぞれ測定対象とした。それぞれの性質を表\ref{hubs}に示す。
+
+\begin{table}[!h]
+    \caption{HUBの分類表}
+  \begin{center}
+\label{hubs}
+  \begin{tabular}{|l|c|c|c|c|c|} \hline
+                & メーカー & 筐体 & GND Connection & ポート数 \\ \hline
+      HUB5 & I-ODATA & プラスチック & × & 5   \\
+      HUB6 & BUFFALO & プラスチック & ○ & 5  \\ 
+      HUB9 & BUFFALO & プラスチック & ○ & 8 \\ \hline
+  \end{tabular}
+  \end{center}
+\end{table}
+
+
+\subsubsection{ポートの定義}
+\begin{figure}[tb]
+  \begin{center}
+   \includegraphics[width=150mm]{hub_port}
+  \end{center}
+\label{hub_port}
+    \caption{ポートの定義}
+\end{figure}
+
+
+DC電源線から電源系に混入した伝導性妨害波がEthernetケーブルに伝達する特性を評価するため、図の\#1 - \#4で表示される測定用のポートとは別に、ディファレンシャルモード、二次コモンモードの2つについて伝搬モードごとにポートを定義する。
+
+電源側の場合について、図で表される$電源V_1, V_2,電流 I_1, I_2$を用いて、ディファレンシャルモード時の$電源V_D、電流I_D$および二次コモンモードの$電圧V_S、電流I_S$を以下のように定義できる。
+
+\begin{equation}
+V_D = V_1 - V_2, I_D = \frac{I_1 - I_2}{2}
+\end{equation}
+
+\begin{equation}
+V_S = \frac{V_1 + V_2}{2},  I_S = I_1 + I_2
+\end{equation}
+
+通信側の場合について、図で表される$電源V_3, V_4,電流 I_3, I_4$を用いて、ディファレンシャルモード時の$電源V_D、電流I_D$および二次コモンモードの$電圧V_S、電流I_S$を以下のように定義できる。
+
+\begin{equation}
+V_D = V_3 - V_4,  I_D = \frac{I_3 - I_4}{2}
+\end{equation}
+
+\begin{equation}
+V_S = \frac{V_3 - V_4}{2},  I_S = I_3 + I_4
+\end{equation}
+
+以上のように、定義される論理ポートに関して、電源側をポート1、通信側をポート2と呼ぶ。
+測定した4ポートSパラメータ（物理ポートに対するSパラメータ）を論理ポートに対応させたミクスドモードSパラメータを用いて
+妨害波の伝達特性について評価する。
+以下、測定結果の報告では$S_{cd21}$(ディファレンシャルモードで電源側のポートに入力された妨害波がコモンモードとして通信側のポートに伝達する割合)、
+$S_{cc21}$(コモンモードで電源側のポートに入力された妨害波がコモンモードとして通信側のポートに伝達する割合)、
+などを用いて議論している。
+
+
+\subsubsection{高さ(システムグラウンドからの距離)について}
+伝送特性を安定させるため、DC電源、電源ケーブル、BIASTEE、スイッチングハブのいずれもシステムグラウンドから高さ100 mmの箇所に配置した。電源ケーブルおよびRJ45-SMA変換基板について、2本の線がシステムグラウンドに対して非対称にならないようにした。
+
+\subsubsection{各線長さについて}
+実際に測定した範囲は1-500 MHzであるが、今回用いたCDNEの測定範囲周波数帯は30から300 MHzである。300 MHzの妨害波の波長は1 mであり、電源ケーブルを伝送線路とみなさないためにはケーブル長をその$1/20$程度に収える必要があるとされる。すなわち、今回は50 mm以下にすることが求められる。
+
+
+
+\subsection{実際の測定について}
+\begin{figure}[tb]
+  \begin{center}
+   \includegraphics[width=150mm]{hubput}
+  \end{center}
+\label{hub2}
+    \caption{スイッチングハブの測定系(側面からの配置図)}
+\end{figure}
+
+\begin{itemize}
+\item{}DC電源とBIASTEEのDC端子間の接続には対撚り2線を用い、、フェライトクランプを設置した。
+\item{}ACアダプタの線の長さを$40$[mm]にした。
+\item{}BIASTEEのGNDからの高さを$100$[mm]、スイッチングハブのGNDからの高さを$100$[mm]、DC電源のGNDからの高さを$100$[mm]とした。
+\end{itemize}
+
+
+
+\subsection{測定結果}
+
+図より、コモンモード・ディファレンシャルモードの入力に対して、約$-$6dBの伝達が観測された。これらは、ACアダプタ単体での伝達特性に比べて高い値で、非常に結合が強いといえる。
+
+\begin{figure}[tb]
+ \begin{minipage}{0.6\hsize}
+  \begin{center}
+   \includegraphics[width=100mm]{sdd21}
+  \end{center}
+	\caption{Sdd21}
+ \end{minipage}
+ \begin{minipage}{0.6\hsize}
+  \begin{center}
+   \includegraphics[width=100mm]{scd21}
+  \end{center}
+	\caption{Scd21}
+ \end{minipage}
+\end{figure}
+
+\begin{figure}[tb]
+ \begin{minipage}{0.6\hsize}
+  \begin{center}
+   \includegraphics[width=100mm]{sdc21}
+  \end{center}
+	\caption{Sdc21}
+ \end{minipage}
+ \begin{minipage}{0.6\hsize}
+  \begin{center}
+   \includegraphics[width=100mm]{scc21}
+  \end{center}
+	\caption{Scc21}
+ \end{minipage}
+\end{figure}
+
+\begin{figure}[tb]
+ \begin{minipage}{0.6\hsize}
+  \begin{center}
+   \includegraphics[width=100mm]{sdd11}
+  \end{center}
+	\caption{Sdd11}
+ \end{minipage}
+ \begin{minipage}{0.6\hsize}
+  \begin{center}
+   \includegraphics[width=100mm]{scc11}
+  \end{center}
+	\caption{Scc11}
+ \end{minipage}
+\end{figure}
+
+
+\subsection{考察}
+得られたデータの妥当性について検討する。HUBに接続される電源系を考える。L線、N線において、図3.10左側のようにLとNにおけるシステムグラウンドからの電圧を${V_v}^{1}, {V_g}^{1}$、またシステムグラウンドとの間の容量${C_v}^{1},{C_g}^{1}$とできる。
+HUB内部では動作回路とHUB内のグラウンドにおいて、それぞれシステムグラウンドとの間の電圧${V_v}^{2}, {V_g}^{2}$、容量を${C_v}^{2},{C_g}^{2}$とできる。
+
+
+\begin{figure}[tb]
+  \begin{center}
+   \includegraphics[width=150mm]{1127hub22}
+  \end{center}
+\label{hub_genri}
+    \caption{HUB内外での電流、電圧について}
+\end{figure}
+
+\clearpage
+
+図の電源とHUB内部の境界条件により、
+\begin{equation}
+{V_v}^{1} = {V_v}^{2} = {V_v}
+\end{equation}
+\begin{equation}
+{V_g}^{1} = {V_g}^{2} = {V_v}
+\end{equation}
+
+
+DC電源線から電源系に混入した伝導性妨害波がEthernetケーブルに伝達する特性を評価するため、図の\#1 - \#4で表示される測定用のポートとは別に、ディファレンシャルモード、二次コモンモードの2つについて伝搬モードごとにポートを定義する。
+
+
+電源側について、ディファレンシャルモード電圧${V_D}^{1}$およびコモンモード電圧${V_C}^{1}$とすると、
+\begin{equation}
+{V_D}^{1} = {V_v}^{1} - {V_g}^{1}
+\end{equation}
+\begin{equation}
+{V_C}^{1} = \frac{{C_v}^{1}}{{C_v}^{1} +{C_g}^{1}}{V_v}^{1} + \frac{{C_g}^{1}}{{C_v}^{1} +{C_g}^{1}} {V_g}^{1} = \frac{{V_v}^{1} + {V_g}^{1} }{2}
+\end{equation}
+が成り立つ。(なお、電源側2線の対称性より${C_v}^{1} = {C_g}^{1}$とした。)
+
+HUB内部について、ディファレンシャルモード電圧${V_D}^{2}$およびコモンモード電圧${V_C}^{2}$とすると、
+\begin{equation}
+{V_D}^{2} = {V_v}^{2} - {V_g}^{2}
+\end{equation}
+\begin{equation}
+{V_C}^{2} = \frac{{C_v}^{2}}{{C_v}^{2} +{C_g}^{1}}{V_v}^{2} + \frac{{C_g}^{2}}{{C_v}^{2} +{C_g}^{2}} {V_g}^{1}    = {V_g}^{2}
+\end{equation}
+が成り立つ。(なお、HUB内部のグラウンドの面積に比べて、動作回路の導線が占める面積は非常に小さいため、${C_v}^{2} << {C_g}^{2}$とした。)
+
+ここで、
+\begin{equation}
+{V_C}^{1} = \frac{{V_v} + {V_g} }{2} =  \frac{{V_v} - {V_g} }{2} + {V_g} = \frac{{V_D} }{2} + {V_g}
+\end{equation}
+\begin{equation}
+{V_C}^{2} = {V_g}
+\end{equation}
+より、
+\begin{equation}
+\Delta V_C = {V_C}^{2} - {V_C}^{1} = -\frac{{V_D}^{1} }{2}
+\end{equation}
+
+
+
+
+\section{今後の課題について}
+\subsection{モード変換が起きている箇所の特定}
+     候補は2つと考えられていた。1つはAC電源の出力側近辺で、もう1つはスイッチングハブのパルストランス。これを特定するべくAC電源、スイッチングハブ個別について妨害波伝達特性を測定、比較した。
+
+
+結果、ACアダプタ部分では、電源線のコモンモードから通信線のディファレンシャルモードへは最大でも$-$30 dB、コモンモードへは$-$20 dB程度であった。それに対して、スイッチングハブ部分では、すべてのモードの伝達特性および変換特性が$-$6 dB程度となり、非常に強い結合があることが推測できた。
+今後行うべきことを以下に述べる。
+\begin{itemize}
+\item{}共振が疑われる箇所の長さを変える等して、正しい測定ができていることを確かめる。
+\item{}簡易版のスイッチングハブ(メインの電子回路とパルストランスのみ)を作成し、伝達特性が-6dBであることの確認をする。
+\item{}スイッチングハブ内部構造を把握し、LEDでノイズが生じているかどうか、電源側のグラウンドと通信側のグラウンドをつなげるとどうなるか、等を調べる。
+\item{}${C_v}^{2}, {C_g}^{2}$を変えるなどして、妨害波伝達を抑制する方法について考える。
+\item{}全体の測定系を構築し実測し、今回のデータを合成したものと比較し、結果の確認を行う。
+\item{}ACアダプタ側のみのデータについて、再度計測して再現性あるものを得る。
+\end{itemize}
+
+\subsection{CDNEの3線への対応、コモンモードとディファレンシャルモードの分離}
+     コモンモードのみ、またはディファレンシャルモードのみというように分離して測定できるなCDNEを作る。
+\begin{itemize}
+\item{}先行研究を調査し、用いられているパラメータのうちどれを採用するか決める。
+\item{}シミュレーションにより、現在考えている回路で求める動作ができるか確認する。
+\item{}実際に回路を作成し、求める動作ができるか確認する。
+\end{itemize}
+
+
+
+\section{付録}
+4ポートSパラメータの合成について述べる。電源回路とスイッチングハブそれぞれの伝達特性(Sパラメータ)について、以下が成り立つ。
+\begin{equation}
+b_{\rm i}^{\rm A} = S_{\rm ii}^{\rm A} a_{\rm i}^{\rm A} + S_{\rm io}^{\rm A} a_{\rm o}^{\rm A}
+\end{equation}
+\begin{equation}
+b_{\rm o}^{\rm A} = S_{\rm oi}^{\rm A} a_{\rm i}^{\rm A} + S_{\rm oo}^{\rm A} a_{\rm o}^{\rm A}
+\end{equation}
+\begin{equation}
+b_{\rm i}^{\rm H} = S_{\rm ii}^{\rm A} a_{\rm i}^{\rm H} + a_{\rm io}^{\rm H} a_{\rm o}^{\rm H}
+\end{equation}
+\begin{equation}
+b_{\rm o}^{\rm H} = S_{\rm oi}^{\rm H} a_{\rm i}^{\rm H} + S_{\rm oo}^{\rm H} a_{\rm o}^{\rm H}
+\end{equation}
+\begin{equation}
+a_{\rm o}^{\rm A} = b_{\rm i}^{\rm H}  ,  b_{\rm o}^{\rm A} = a_{\rm i}^{\rm H}
+\end{equation}
+
+
+
+また、電源回路とスイッチングハブ合わせた、系全体のSパラメータをSとして、以下の様に書ける。
+
+\begin{equation}
+S =
+\left[
+\begin{array}{cc}
+S_{\rm I I} & S_{\rm I I\hspace{-.2em}I} \\
+S_{\rm I\hspace{-.2em}I I} & S_{\rm I\hspace{-.1em}I I\hspace{-.2em}I} \\
+\end{array}
+\right]
+\end{equation}
+\begin{equation}
+\left[
+\begin{array}{c}
+b_{\rm i}^{\rm A}  \\
+b_{\rm o}^{\rm H}  \\
+\end{array}
+\right]
+=
+\left[
+\begin{array}{cc}
+S_{\rm II} & S_{\rm II\hspace{-.1em}I} \\
+S_{\rm I\hspace{-.1em}II} & S_{\rm I\hspace{-.1em}II\hspace{-.1em}I} \\
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+a_{\rm i}^{A}  \\
+a_{\rm o}^{H}  \\
+\end{array}
+\right]
+\end{equation}
+
+図(4.7)から図(4.11)からSの各要素となる行列を求めるには、
+
+
+
+\begin{equation}
+S_{\rm II} = S_{\rm ii}^{\rm A} + S_{\rm io}^{\rm A}(E - S_{\rm ii}^{\rm H} S_{\rm oo}^{\rm A})^{-1}S_{\rm ii}^{\rm H} S_{\rm oi}^{\rm A}
+\end{equation}
+\begin{equation}
+S_{\rm II\hspace{-.1em}I} = S_{\rm io}^{\rm A}(E - S_{\rm ii}^{\rm H} S_{\rm oo}^{\rm A})^{-1}S_{\rm io}^{\rm H}
+\end{equation}
+\begin{equation}
+S_{\rm I\hspace{-.1em}II} = S_{\rm oi}^{\rm H}(S_{\rm oi}^{\rm A} + (E-S_{\rm ii}^{\rm H} S_{\rm oo}^{\rm A})^{-1}S_{\rm ii}^{\rm H} S_{\rm oi}^{\rm A}
+\end{equation}
+\begin{equation}
+S_{\rm I\hspace{-.1em}II\hspace{-.1em}I}= S_{\rm oi}^{\rm H}(E-S_{\rm ii}^{\rm H} S_{\rm oo}^{\rm A})^{-1}S_{\rm io}^{\rm H} + S_{\rm oo}^{\rm H}
+\end{equation}
+
+とすればよい。
+今後は、この式を用いて電源回路とスイッチングハブそれぞれの伝達特性(Sパラメータ)から、系全体のSパラメータを求める。さらに、実験で得られた系全体のSパラメータと比較する。
+
+
+%参考文献のリスト書き方は別途学んでください
+\begin{thebibliography}{9}
+\bibitem{past}  和田修己, 松嶋徹, ``多様な伝搬モードで通信装置に侵入する伝導性妨害波の評価技術と対策技術に関する研究,'' NTT共同研究2013年度研究報告書, Mar. 2014.
+\end{thebibliography}
+
+
+
+\end{document}

@@ -1,0 +1,113 @@
+
+\subsection{対称2線伝送路の伝搬モード}
+簡単化のために2線の対称伝送線路について、コモンモードとディファレンシャルモードに分離する。2線における電圧・電流を[V]、[I]とし、線路のインピーダンス行列とアドミタンス行列を[Z]、[Y]とすると、それぞれ以下のように書ける\cite{text1}、\cite{text2}、\cite{text3}。
+
+\begin{eqnarray}
+[V] =
+\left[
+\begin{array}{cc}
+V_1 & V_2 \\
+\end{array}
+\right]
+^{\mathrm{T}}
+、
+[I] =
+\left[
+\begin{array}{cc}
+I_1 & I_2 \\
+\end{array}
+\right]
+^{\mathrm{T}}
+\end{eqnarray}
+
+\begin{eqnarray}
+[Z] =
+\left[
+\begin{array}{cc}
+z_{11} & z_{12} \\
+z_{21} & z_{22} \\
+\end{array}
+\right]
+、
+[Y] =
+\left[
+\begin{array}{cc}
+y_{11} & y_{12} \\
+y_{21} & y_{22} \\
+\end{array}
+\right]
+\end{eqnarray}
+
+$
+ここで、線路断面における電圧・電流を各モードの電圧・電流で表すために、変換行列[\mu]、[\nu]によって
+$
+
+\begin{eqnarray}
+[V] = [\mu][v]、[I] = [\nu][i]
+\end{eqnarray}
+
+
+のように変換する。ここで、[v]、[i]は各モードの電圧・電流である。
+
+今回は特に対称性をもつため、
+\begin{eqnarray}
+[\mu] =
+\left[
+\begin{array}{cc}
+1 & \frac{1}{2} \\
+1 & -\frac{1}{2} \\
+\end{array}
+\right]
+\end{eqnarray}
+
+\begin{eqnarray}
+[\nu] =
+\left[
+\begin{array}{cc}
+\frac{1}{2}  & 1 \\
+\frac{1}{2} &  -1 \\
+\end{array}
+\right]
+\end{eqnarray}
+とすると、線路電圧とモード電圧、および線路電流とモード電流の関係について、以下の図\ref{com}(a)、図\ref{dif}(b)のようになる。
+
+
+
+\begin{figure}[H]
+\begin{center}
+\subfigure[コモンモード] {\includegraphics[width=0.45\columnwidth]{com.eps}}\label{com}
+\subfigure[ディファレンシャルモード] {\includegraphics[width=0.45\columnwidth]{dif.eps}}\label{dif}
+\end{center}
+\caption{対称二線路における伝搬モード分離について}
+\end{figure}
+
+\begin{eqnarray}
+V_1 = \frac{1}{2} V_D + V_C \\
+V_2 = - {\frac{1}{2} V_D} + V_C \\
+I_1 = I_D + \frac{1}{2} I_C \\
+I_2 = - I_D + \frac{1}{2} I_C \\
+\end{eqnarray}
+
+で、このとき
+
+\begin{eqnarray}
+[z] =
+\left[
+\begin{array}{cc}
+\frac{Z_{11}+Z_{21}}{2}  & 0 \\
+0 &  2(Z_{11}-Z_{21}) \\
+\end{array}
+\right]
+\end{eqnarray}
+
+\begin{eqnarray}
+[y] =
+\left[
+\begin{array}{cc}
+2(Y_{11}+Y_{21}) & 0 \\
+0 &  \frac{Y_{11}-Y_{21}}{2}  \\
+\end{array}
+\right]
+\end{eqnarray}
+となり、$[z]、[y]$をそれぞれ対角化できる。
+

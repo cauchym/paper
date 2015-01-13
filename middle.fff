@@ -1,0 +1,184 @@
+\setcounter{chapter}{1}
+\addtocounter{chapter}{-1}
+\stepcounter{chapter}
+ 
+\begin{figure*}
+[H]
+\begin{center}
+\includegraphics[height=0.5\hsize]{net.eps}
+\caption{回線終端装置に接続される様々な線}
+\label{fig:net}
+\end{center}
+\end{figure*}
+\kueeseparator
+ 
+\clearpage
+\setcounter{chapter}{2}
+\addtocounter{chapter}{-1}
+\stepcounter{chapter}
+ 
+\begin{figure*}
+[H]
+\begin{center}
+\subfigure[電源内蔵型スイッチングハブ] {\includegraphics[width=0.45\columnwidth]{blockzunaizou.eps}}\label{fig:blockzunaizou}
+\subfigure[外部電源型スイッチングハブ] {\includegraphics[width=0.45\columnwidth]{blockzugaibu.eps}}\label{fig:blockzugaibu}
+\end{center}
+\caption{スイッチングハブの測定系概要}
+\end{figure*}
+\kueeseparator
+ 
+\begin{figure*}
+[H]
+\begin{center}
+\subfigure[スイッチングハブ部分のみの測定系概要] {\includegraphics[width=0.45\columnwidth]{hubmosiki.eps}}\label{fig:hubmosiki}
+\subfigure[AC電源部分のみ測定系概要] {\includegraphics[width=0.45\columnwidth]{acmosiki.eps}}\label{fig:acmosiki}
+\end{center}
+\caption{外部電源型スイッチングハブの一部分の測定系概要}
+\end{figure*}
+\kueeseparator
+ 
+\begin{figure*}
+[H]
+\begin{center}
+\includegraphics[height=0.5\hsize]{hub_port}
+\caption{ポートの定義}
+\label{fig:hub_port}
+\end{center}
+\end{figure*}
+\kueeseparator
+ 
+\clearpage
+\setcounter{chapter}{3}
+\addtocounter{chapter}{-1}
+\stepcounter{chapter}
+ 
+\begin{figure*}
+[tb]
+  \begin{center}
+   \includegraphics[width=150mm]{acput}
+  \end{center}
+    \caption{ACアダプタの測定系(側面からの配置図)}
+\label{acput}
+\end{figure*}
+\kueeseparator
+ 
+\begin{table*}
+[!h]
+  \begin{center}
+    \caption{ネットワークアナライザの設定}
+  \begin{tabular}{|c|c|} \hline
+       出力電力（output power）   &  0dBm   \\ \hline
+      sweep type & log scale \\ \hline
+     sweep point & 1601 \\ \hline
+      測定周波数帯 & 1MHz-500MHz \\ \hline
+      IF Band Width & 100Hz \\   \hline
+  \end{tabular}
+  \end{center}
+\end{table*}
+\kueeseparator
+ 
+\begin{figure*}
+[H]
+\begin{center}
+\subfigure[Scc11] {\includegraphics[width=0.45\columnwidth]{Scc11a.eps}}
+\subfigure[Scc21] {\includegraphics[width=0.45\columnwidth]{Scc21a.eps}}
+\end{center}
+\caption{モード変換特性}
+\label{fg:Scc11}
+\end{figure*}
+\kueeseparator
+ 
+\begin{figure*}
+[H]
+\begin{center}
+\subfigure[Scd21] {\includegraphics[width=0.45\columnwidth]{Scd21a.eps}}
+\subfigure[Sdc21] {\includegraphics[width=0.45\columnwidth]{Sdc21a.eps}}
+\end{center}
+\caption{モード変換特性}
+\label{fg:Sdc21}
+\end{figure*}
+\kueeseparator
+ 
+\begin{figure*}
+[H]
+\begin{center}
+\subfigure[Sdd11] {\includegraphics[width=0.45\columnwidth]{Sdd11a.eps}}
+\subfigure[Sdd21] {\includegraphics[width=0.45\columnwidth]{Sdd21a.eps}}
+\end{center}
+\caption{モード変換特性}
+\label{fg:Sdd11a}
+\end{figure*}
+\kueeseparator
+ 
+\begin{figure*}
+[H]
+\begin{center}
+\subfigure[Sdd11] {\includegraphics[width=0.45\columnwidth]{Sdd11s.eps}}
+\subfigure[Sdd21] {\includegraphics[width=0.45\columnwidth]{Sdd21s.eps}}
+\end{center}
+\caption{モード変換特性}
+\label{fg:Sdd11}
+\end{figure*}
+\kueeseparator
+ 
+\begin{figure*}
+[H]
+\begin{center}
+\subfigure[Scs] {\includegraphics[width=0.45\columnwidth]{R_SCS.eps}}
+\subfigure[Sds] {\includegraphics[width=0.45\columnwidth]{AC_R_COMP_SDS.eps}}
+\end{center}
+\caption{モード変換特性}
+\label{fg:RSCS}
+\end{figure*}
+\kueeseparator
+ 
+\clearpage
+\setcounter{chapter}{4}
+\addtocounter{chapter}{-1}
+\stepcounter{chapter}
+ 
+\begin{figure*}
+[H]
+\begin{center}
+\includegraphics[height=0.5\hsize]{hubnaibu.eps}
+\caption{スイッチングハブ内部の基板構成}
+\label{fg:hubnaibu}
+\end{center}
+\end{figure*}
+\kueeseparator
+ 
+\begin{figure*}
+[H]
+\begin{center}
+\includegraphics[height=0.5\hsize]{1127hub22.eps}
+\caption{スイッチングハブ内外での電流、電圧について}
+\label{fg:hub_genri}
+\end{center}
+\end{figure*}
+\kueeseparator
+ 
+\clearpage
+\setcounter{chapter}{5}
+\addtocounter{chapter}{-1}
+\stepcounter{chapter}
+ 
+\clearpage
+\setcounter{chapter}{6}
+\addtocounter{chapter}{-1}
+\stepcounter{chapter}
+ 
+\begin{figure*}
+[H]
+\begin{center}
+\subfigure[コモンモード] {\includegraphics[width=0.45\columnwidth]{com.eps}}\label{com}
+\subfigure[ディファレンシャルモード] {\includegraphics[width=0.45\columnwidth]{dif.eps}}\label{dif}
+\end{center}
+\caption{対称二線路における伝搬モード分離について}
+\end{figure*}
+\kueeseparator
+ 
+\clearpage
+\setcounter{chapter}{6}
+\addtocounter{chapter}{-1}
+\stepcounter{chapter}
+ 

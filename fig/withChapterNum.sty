@@ -1,0 +1,28 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%      withChapterNum.sty  ver. 1.00         %%
+%%             2010.02.06   Masahiro KATO     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%このスタイルを読み込む事で図，表，数式の番号に章番号が負荷されます
+%subfigureと併用する時は，必ずこちらを先に読み込ませましょう
+
+\typeout{"withChapterNum.sty"  2010.02.06  Masahiro KATO}
+
+%% 図番号に章番号を追加
+\makeatletter 
+\renewcommand{\thefigure}{% 
+\thesection.\arabic{figure}} 
+\@addtoreset{figure}{section} 
+\makeatother
+
+%% 表番号に章番号を追加
+\makeatletter 
+\renewcommand{\thetable}{% 
+\thesection.\arabic{table}} 
+\@addtoreset{table}{section} 
+\makeatother
+
+%% 数式番号に章番号を追加
+\makeatletter
+\@addtoreset{equation}{section}
+\def\theequation{\thesection.\arabic{equation}}
+\makeatother

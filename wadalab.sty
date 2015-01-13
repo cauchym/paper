@@ -1,0 +1,93 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%      wadalab.sty  ver. 1.30                %%
+%%             2002.05.23   Akihiro NAMBA     %%
+%% modified on 2006.07.12,  by Osami WADA     %%
+%% modified on 2006.09.20,  by Masakazu YAGI  %%
+%% modified on 2010.02.06,  by Masahiro KATO  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\typeout{"wadalab.sty"  2010.02.06  Masahiro KATO}
+%
+\RequirePackage{lastpage}
+%
+\setlength{\textwidth}{170mm}
+\setlength{\oddsidemargin}{-5mm}
+\setlength{\topmargin}{-10mm}
+\setlength{\textheight}{230mm}
+
+%% wdheadings の表示位置……かな？
+\def\ps@wdheadings{\let\ps@jpl@in\ps@plain%
+  \let\@oddfoot\@empty\let\@evenfoot\@empty
+  \def\@evenhead{\leftmark}%
+  \def\@oddhead{\rightmark}%
+  \def\@evenfoot{\hfil\thepage/\pageref{LastPage}\hfil}%
+  \def\@oddfoot{\hfil\thepage/\pageref{LastPage}\hfil}%
+  \let\@mkboth\@gobbletwo
+  \let\sectionmark\@gobble
+  \let\subsectionmark\@gobble
+}
+
+%% 著者+グループ
+\def\@group{}
+\def\group#1{\def\@group{#1}}
+
+%% wdheading の定義
+\def\wdheading{\markright{\footnotesize\@group\hfill \@title\hskip 1em\@date}}
+
+%% wdempty の定義（ページ番号無し） の場合……？
+\def\ps@wdempty{\let\ps@jpl@in\ps@plain%
+  \let\@oddfoot\@empty\let\@evenfoot\@empty
+  \def\@evenhead{\leftmark}%
+  \def\@oddhead{\rightmark}%
+  \let\@mkboth\@gobbletwo
+  \let\sectionmark\@gobble
+  \let\subsectionmark\@gobble
+}
+
+%% abstract スタイル変更
+\def\abstract{\quotation {\bf 概要}---}
+%\def\endabstract{\endquotation}
+
+%% subtitle使用可能に
+\def\@subtitle{}
+\def\subtitle#1{\def\@subtitle{#1}}
+
+%% \dateの再定義
+\renewcommand{\today}{%
+  \the\year .%
+   {\ifnum \month < 10  0\the\month .%
+    \else \the\month .%
+    \fi}%
+   {\ifnum \day < 10  0\the\day%
+    \else \the\day%
+    \fi}%
+}
+
+%% maketitleを再定義
+\def\maketitle{\par
+ \begingroup
+ \def\thefootnote{\fnsymbol{footnote}}
+ \def\@makefnmark{\hbox
+ to 0pt{$^{\@thefnmark}$\hss}}
+ \if@twocolumn
+ \twocolumn[\@maketitle]
+ \else \newpage
+ \global\@topnum\z@ \@maketitle \fi\@thanks
+ \endgroup
+ \setcounter{footnote}{0}
+ \let\maketitle\relax
+ \let\@maketitle\relax
+ \gdef\@thanks{}\gdef\@author{}\gdef\@title{}\let\thanks\relax}
+\def\@maketitle{\newpage
+ \begin{center}
+  {\LARGE \@title \par} 
+  \vskip 0.5em
+  {\large\@subtitle}
+  \vskip 0.5em
+  \@date
+  \vskip 0.3em
+  \@author
+ \end{center}
+\par}
+
+%% 図がページの2/3を超えると一ページにする（通常は0.5)
+\renewcommand{\floatpagefraction}{0.7}

@@ -1,0 +1,69 @@
+\documentclass[sotsuron]{kuee}
+\usepackage{amsfonts,amsmath,amsthm,amssymb,txfonts,color,wrapfloat,graphicx,fancybox,slashbox,jtygm,comment,bm}
+%フォルダ"fig"から読み込む
+\graphicspath{{./fig/}}
+% sibfigureが使いたい場合はもう少し後で読み込む
+
+%% subfigure はここで読み込む（withChapterNumより先に読み込んだ場合，\refした時に章番号が無くなります）
+\usepackage{subfigure}
+
+%%-----ここからマクロ定義
+%太字の斜体　ベクトルや行列の表現にどうぞ
+\def\Mat#1{\mbox{\boldmath $#1$}}
+%添え字
+\def\_#1{_{\rm #1}}
+\def\^#1{^{\rm #1}}
+%まとめて定義
+\def\Matu#1#2{\mbox{\boldmath $#1$}\mbox{$_{\rm #2}$}}
+\def\Matuo#1#2#3{\mbox{\boldmath $#1$}\mbox{$_{\rm #2}^{\rm #3}$}}
+%トピック
+\def\topic#1{\underline{\bf #1}}
+%
+\def\dfrac#1#2{{\displaystyle\frac{#1}{#2}}} %displaystyle付きの分数
+\def\vec#1{\mbox{\boldmath $#1$}}            %ベクトル
+\def\diff#1#2{{\displaystyle\frac{{\rm d}#1}{{\rm d}#2}}}         %1階常微分
+\def\ddiff#1#2{{\displaystyle\frac{{\rm d}^2#1}{{\rm d}#2^2}}}    %2階常微分
+\def\dell#1#2{{\displaystyle\frac{\partial #1}{\partial#2}}}      %1階偏微分
+\def\ddell#1#2{{\displaystyle\frac{\partial^2 #1}{\partial#2^2}}} %2階偏
+\def\m#1{\mathrm{#1}}
+
+\makeatletter
+% \DeclareRobustCommand\cite{\unskip
+%\@ifnextchar[{\@tempswatrue\@citex}{\@tempswafalse\@citex[]}}
+% \def\@cite#1#2{$^{\hbox{\scriptsize{#1\if@tempswa , #2\fi})}}$}
+% \def\@biblabel#1{#1)}
+\makeatother
+%%-----ここからタイトルとヘッダ
+\title{伝搬モードに着目した伝導性妨害波の伝達特性の評価法を利用したモード変換発生箇所特定}
+%\subtitle{サブタイトル}
+\date{\today}
+\author{松田　光志}
+\professor{和田　修己　教授}
+%groupの書式 {著者イニシャル}/{資料シリーズ名}{発行年度}-{資料番号}({改訂回数})
+%%ここまでタイトルとヘッダ-----
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\chapter{序論(×)}
+\input{100_first/first.tex}
+
+\chapter{伝搬モードごとの妨害波伝達特性評価}
+\input{200_mode/mode.tex}
+
+\chapter{スイッチングハブの妨害波伝達特性}
+\input{300_kei/kei.tex}
+
+\chapter{モード変換発生箇所ごとの考察}
+\input{400_tokutei/tokutei.tex}
+
+
+\chapter{結論(×)}
+
+
+\chapter{付録}
+\input{900_furoku/furoku}
+
+\input{bib.tex}
+\end{document}
