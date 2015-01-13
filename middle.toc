@@ -1,0 +1,34 @@
+\contentsline {chapter}{\numberline {第{1}章}序論(×) }{1}
+\contentsline {chapter}{\numberline {第{2}章}伝搬モードごとの妨害波伝達特性評価 }{2}
+\contentsline {section}{\numberline {2.1}ミクスドモードポート、伝搬モードの定義(△)}{2}
+\contentsline {subsection}{\numberline {2.1.1}4ポート(2入力2出力)回路における定義}{2}
+\contentsline {subsection}{\numberline {2.1.2}3ポート(1入力2出力)回路における定義}{2}
+\contentsline {subsubsection}{スイッチングハブ部分のみの入出力ポート定義}{4}
+\contentsline {subsubsection}{ポートの終端条件(○)}{5}
+\contentsline {subsubsection}{電源内蔵型スイッチングハブおよび外部電源型スイッチングハブの終端条件}{5}
+\contentsline {section}{\numberline {2.2}モード変換の発生原理(×)}{6}
+\contentsline {subsection}{\numberline {2.2.1}平衡度の異なる回路の接続によって発生する場合(×)}{6}
+\contentsline {subsection}{\numberline {2.2.2}負荷により伝送線路で発生する場合(×)}{6}
+\contentsline {section}{\numberline {2.3}Sパラメータの合成(△)}{6}
+\contentsline {chapter}{\numberline {第{3}章}スイッチングハブの妨害波伝達特性 }{7}
+\contentsline {section}{\numberline {3.1}3ポート(1入力2出力)回路を対象とする測定系(△)}{7}
+\contentsline {subsection}{\numberline {3.1.1}スイッチングハブを対象とする測定系(△)}{7}
+\contentsline {subsubsection}{測定系の構築（△）}{7}
+\contentsline {subsubsection}{モード変換特性(△)}{7}
+\contentsline {subsection}{\numberline {3.1.2}外部電源型スイッチングハブのACアダプタ部分を対象とする測定系(△)}{7}
+\contentsline {subsubsection}{測定系の構築（△）}{7}
+\contentsline {subsubsection}{モード変換特性(×)}{8}
+\contentsline {section}{\numberline {3.2}4ポート(2入力2出力)回路を対象とする測定系(△)}{8}
+\contentsline {subsection}{\numberline {3.2.1}外部電源型スイッチングハブの電子回路部分を対象とする測定系(△)}{8}
+\contentsline {subsubsection}{測定系の構築（△）}{8}
+\contentsline {subsubsection}{モード変換特性(△)}{9}
+\contentsline {section}{\numberline {3.3}得られた伝達特性の比較、検討}{9}
+\contentsline {chapter}{\numberline {第{4}章}モード変換発生箇所ごとの考察 }{10}
+\contentsline {section}{\numberline {4.1}負荷により伝送線路で生じる場合(△)}{10}
+\contentsline {subsection}{\numberline {4.1.1}ACアダプタの出力側コネクタとスイッチングハブの接続}{10}
+\contentsline {section}{\numberline {4.2}静電容量の非対称性により生じる場合(×)}{10}
+\contentsline {subsection}{\numberline {4.2.1}ACアダプタの線路と出力側コネクタ部分の接続}{10}
+\contentsline {chapter}{\numberline {第{5}章}結論(×) }{12}
+\contentsline {chapter}{\numberline {第{6}章}付録 }{13}
+\contentsline {subsection}{\numberline {6.0.2}対称2線伝送路の伝搬モード}{13}
+\contentsline {chapter}{参 考 文 献}{15}

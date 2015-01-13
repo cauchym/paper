@@ -20,26 +20,6 @@
 \begin{figure*}
 [H]
 \begin{center}
-\subfigure[電源内蔵型スイッチングハブ] {\includegraphics[width=0.45\columnwidth]{blockzunaizou.eps}}\label{fig:blockzunaizou}
-\subfigure[外部電源型スイッチングハブ] {\includegraphics[width=0.45\columnwidth]{blockzugaibu.eps}}\label{fig:blockzugaibu}
-\end{center}
-\caption{スイッチングハブの測定系概要}
-\end{figure*}
-\kueeseparator
- 
-\begin{figure*}
-[H]
-\begin{center}
-\subfigure[スイッチングハブ部分のみの測定系概要] {\includegraphics[width=0.45\columnwidth]{hubmosiki.eps}}\label{fig:hubmosiki}
-\subfigure[AC電源部分のみ測定系概要] {\includegraphics[width=0.45\columnwidth]{acmosiki.eps}}\label{fig:acmosiki}
-\end{center}
-\caption{外部電源型スイッチングハブの一部分の測定系概要}
-\end{figure*}
-\kueeseparator
- 
-\begin{figure*}
-[H]
-\begin{center}
 \includegraphics[height=0.5\hsize]{hub_port}
 \caption{ポートの定義}
 \label{fig:hub_port}

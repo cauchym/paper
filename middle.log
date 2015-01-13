@@ -1,17 +1,17 @@
-This is e-pTeX, Version 3.14159265-p3.5-130605-2.6 (utf8.euc) (TeX Live 2014) (preloaded format=platex 2014.6.29)  13 JAN 2015 13:16
+This is e-pTeX, Version 3.14159265-p3.4-130605-2.6 (utf8.sjis) (TeX Live 2013/W32TeX) (preloaded format=platex 2014.3.26)  13 JAN 2015 17:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**middle
+**middle.tex
 (./middle.tex
-pLaTeX2e <2006/11/10> (based on LaTeX2e <2014/05/01> patch level 0)
+pLaTeX2e <2006/11/10> (based on LaTeX2e <2011/06/27> patch level 0)
 Babel <3.9k> and hyphenation patterns for 78 languages loaded.
 (./kuee.cls
 Document Class: kuee 2005/02/04
-(/usr/local/texlive/2014/texmf-dist/tex/platex/base/jreport.cls
+(c:/w32tex/share/texmf-dist/tex/platex/base/jreport.cls
 Document Class: jreport 2006/06/27 v1.6 Standard pLaTeX class
 \c@@paper=\count81
-(/usr/local/texlive/2014/texmf-dist/tex/platex/base/jsize12.clo
+(c:/w32tex/share/texmf-dist/tex/platex/base/jsize12.clo
 File: jsize12.clo 2006/06/27 v1.6 Standard pLaTeX file (size option)
 )
 \c@part=\count82
@@ -36,7 +36,7 @@ LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
 \kuee@post=\write3
 \@kuee@open=\count92
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(c:/w32tex/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks15
 \symAMSa=\mathgroup5
@@ -44,24 +44,24 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsmath.sty
+(c:/w32tex/share/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amstext.sty
+(c:/w32tex/share/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsgen.sty
+(c:/w32tex/share/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks16
 \ex@=\dimen121
 ))
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(c:/w32tex/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen122
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsopn.sty
+(c:/w32tex/share/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count93
@@ -102,7 +102,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amscls/amsthm.sty
+(c:/w32tex/share/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2004/08/06 v2.20
 \thm@style=\toks21
 \thm@bodyfont=\toks22
@@ -114,10 +114,10 @@ Package: amsthm 2004/08/06 v2.20
 \thm@headsep=\skip48
 \dth@everypar=\toks26
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(c:/w32tex/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/txfonts.sty
+(c:/w32tex/share/texmf-dist/tex/latex/txr/txfonts.sty
 Package: txfonts 2008/01/22 v3.2.1
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 21.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -204,37 +204,35 @@ LaTeX Info: Redefining \not on input line 1043.
 LaTeX Info: Redefining \textsquare on input line 1063.
 LaTeX Info: Redefining \openbox on input line 1064.
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2014/04/23 v1.1a Standard LaTeX Color (DPC)
+(c:/w32tex/share/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
+(c:/w32tex/share/texmf-dist/tex/latex/config/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: dvips.def on input line 137.
+Package color Info: Driver file: dvips.def on input line 130.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/dvips.def
-File: dvips.def 2014/04/23 v3.0j Driver-dependant file (DPC,SPQR)
+(c:/w32tex/share/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/dvipsnam.def
-File: dvipsnam.def 2014/04/23 v3.0j Driver-dependant file (DPC,SPQR)
-))
-(./wrapfloat.sty
+(c:/w32tex/share/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+)) (./wrapfloat.sty
 \WF@wrappedlines=\count105
-)
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+) (c:/w32tex/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+(c:/w32tex/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks27
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
+(c:/w32tex/share/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
+(c:/w32tex/share/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
+(c:/w32tex/share/texmf-dist/tex/latex/config/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: dvips.def on input line 91.
@@ -242,7 +240,7 @@ Package graphics Info: Driver file: dvips.def on input line 91.
 \Gin@req@height=\dimen130
 \Gin@req@width=\dimen131
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/fancybox/fancybox.sty
+(c:/w32tex/share/texmf-dist/tex/latex/fancybox/fancybox.sty
 Package: fancybox 2010/05/15 1.4
 
 Style option: `fancybox' v1.4 <2010/05/15> (tvz)
@@ -255,54 +253,50 @@ Style option: `fancybox' v1.4 <2010/05/15> (tvz)
 \EndVerbatimTokens=\toks31
 \Verbatim@Outfile=\write4
 \Verbatim@Infile=\read1
-)
-
-! LaTeX Error: File `slashbox.sty' not found.
-
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: sty)
-
-Enter file name: 
-(./jtygm.sty
+) (c:/w32tex/share/texmf-dist/tex/latex/slashbox/slashbox.sty
+slashbox style by K.Yasuoka, May 1993.
+\@slashboxa=\box45
+\@slashboxb=\box46
+\@slashboxc=\box47
+\@slashboxwd=\count106
+\@slashboxht=\count107
+\@slashsepl=\dimen133
+\@slashsepr=\dimen134
+) (./jtygm.sty
 Package: jtygm 1998/06/12 based on v1.3 KANJI font defines
-) (/usr/local/texlive/2014/texmf-dist/tex/latex/comment/comment.sty
+) (c:/w32tex/share/texmf-dist/tex/latex/comment/comment.sty
 \CommentStream=\write5
-Excluding comment 'comment')
-(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/bm.sty
+
+Excluding comment 'comment') (c:/w32tex/share/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2004/02/26 v1.1c Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup11
 \symboldletters=\mathgroup12
 \symboldsymbols=\mathgroup13
 \symboldlargesymbols=\mathgroup14
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 137.
-LaTeX Info: Redefining \bm on input line 203.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 138.
+LaTeX Info: Redefining \bm on input line 204.
 ) (./subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigtopskip=\skip49
 \subfigcapskip=\skip50
-\subfigcaptopadj=\dimen133
+\subfigcaptopadj=\dimen135
 \subfigbottomskip=\skip51
-\subfigcapmargin=\dimen134
+\subfigcapmargin=\dimen136
 \subfiglabelskip=\skip52
-\c@subfigure=\count106
-\c@lofdepth=\count107
-\c@subtable=\count108
-\c@lotdepth=\count109
-
-****************************************
-* Local config file subfigure.cfg used *
-****************************************
-(/usr/local/texlive/2014/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\c@subfigure=\count108
+\c@lofdepth=\count109
+\c@subtable=\count110
+\c@lotdepth=\count111
 \subfig@top=\skip53
 \subfig@bottom=\skip54
-)
-(./middle.aux)
+) (./middle.aux)
 \openout1 = `middle.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 45.
 LaTeX Font Info:    Try loading font information for OML+txmi on input line 45.
 
- (/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/omltxmi.fd
+
+(c:/w32tex/share/texmf-dist/tex/latex/txr/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 45.
@@ -313,7 +307,8 @@ LaTeX Font Info:    ... okay on input line 45.
 LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 45.
 LaTeX Font Info:    Try loading font information for OMS+txsy on input line 45.
 
- (/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/omstxsy.fd
+
+(c:/w32tex/share/texmf-dist/tex/latex/txr/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 45.
@@ -321,14 +316,14 @@ LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 45.
 LaTeX Font Info:    Try loading font information for OMX+txex on input line 45.
 
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/omxtxex.fd
+(c:/w32tex/share/texmf-dist/tex/latex/txr/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 45.
 LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 45.
 LaTeX Font Info:    Try loading font information for U+txexa on input line 45.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/utxexa.fd
+(c:/w32tex/share/texmf-dist/tex/latex/txr/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 45.
@@ -340,41 +335,195 @@ LaTeX Font Info:    ... okay on input line 45.
 (I search kanjifont definition file: . . ) (I search font definition file: . .
 . . . . . )
 LaTeX Font Info:    Try loading font information for OT1+txr on input line 45.
- (/usr/local/texlive/2014/texmf-dist/tex/latex/txfonts/ot1txr.fd
+ (c:/w32tex/share/texmf-dist/tex/latex/txr/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
-Missing character: There is no ^^93 in font txr!
-Missing character: There is no ^^94 in font txr!
-Missing character: There is no ^^c0 in font txr!
-Missing character: There is no ^^83 in font txr!
-Missing character: There is no ^^82 in font txr!
-Missing character: There is no ^^81 in font txr!
-Missing character: There is no ^^83 in font txr!
-Missing character: There is no ^^82 in font txr!
-Missing character: There is no ^^c9 in font txr!
-Missing character: There is no ^^92 in font txr!
-Missing character: There is no ^^85 in font txr!
-Missing character: There is no ^^96 in font txr!
-Missing character: There is no ^^da in font txr!
-Missing character: There is no ^^82 in font txr!
-Missing character: There is no ^^b5 in font txr!
-Missing character: There is no ^^82 in font txr!
-Missing character: There is no ^^bd in font txr!
-Missing character: There is no ^^93 in font txr!
-Missing character: There is no ^^93 in font txr!
-Missing character: There is no ^^b1 in font txr!
-Missing character: There is no ^^90 in font txr!
-Missing character: There is no ^^ab in font txr!
-Missing character: There is no ^^96 in font txr!
-Missing character: There is no ^^94 in font txr!
-Missing character: There is no ^^82 in font txr!
-Missing character: There is no ^^cc in font txr!
-Missing character: There is no ^^93 in font txr!
-Missing character: There is no ^^92 in font txr!
-Missing character: There is no ^^93 in font txr!
-Missing character: There is no ^^c1 in font txr!
-Missing character: There is no ^^90 in font txr!
-Missing character: There is no ^^ab in font txr!
-Missing character: There is no ^^82 in font txr!
-Missing character: There is no ^^cc in font txr!
-Missing character: The
+LaTeX Font Info:    Try loading font information for U+txsya on input line 46.
+
+(c:/w32tex/share/texmf-dist/tex/latex/txr/utxsya.fd
+File: utxsya.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Try loading font information for U+txsyb on input line 46.
+
+(c:/w32tex/share/texmf-dist/tex/latex/txr/utxsyb.fd
+File: utxsyb.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Try loading font information for U+txmia on input line 46.
+
+(c:/w32tex/share/texmf-dist/tex/latex/txr/utxmia.fd
+File: utxmia.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Try loading font information for U+txsyc on input line 46.
+
+(c:/w32tex/share/texmf-dist/tex/latex/txr/utxsyc.fd
+File: utxsyc.fd 2000/12/15 v3.1
+) [0]
+\clearpage
+(./middle.toc [1
+
+
+])
+\tf@toc=\write6
+\openout6 = `middle.toc'.
+
+ [2]
+\clearpage
+第{1}章.
+\openout3 = `middle.fff'.
+
+(middle.fff) (./100_first/first.tex
+Overfull \hbox (6.0233pt too wide) in paragraph at lines 10--11
+\JY1/mc/m/n/12 どの多対ケ ーブルが接続されるポ ートに侵入する伝導性妨害波につい
+て検討し 、 そ
+ []
+
+) [1
+
+]
+第{2}章.
+(./200_mode/mode.tex
+Overfull \hbox (11.88304pt too wide) in paragraph at lines 22--23
+\JY1/mc/m/n/12 が用いられるため 、 \OT1/txr/m/n/12 2 \JY1/mc/m/n/12 線の電源ケ 
+ーブルとする 。 伝送線路の電圧を $\OML/txmi/m/it/12 V[]; V[]; \JY1/mc/m/n/12 電
+流を \OML/txmi/m/it/12 I[]; I[]$
+ []
+
+[2
+
+] [3] [4]
+LaTeX Font Info:    Try loading font information for OMS+txr on input line 123.
+
+ (c:/w32tex/share/texmf-dist/tex/latex/txr/omstxr.fd
+File: omstxr.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <12> not available
+(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 123.
+) [5] [6]
+第{3}章.
+(./300_kei/kei.tex
+Overfull \hbox (11.44063pt too wide) in paragraph at lines 22--23
+\JY1/mc/m/n/12 定ポ ートは同軸ケ ーブルを介してベクトルネ ッ トワ ークアナライ
+ザ \OT1/txr/m/n/12 (Ag-i-lent E5017C)
+ []
+
+
+Overfull \hbox (0.71573pt too wide) in paragraph at lines 22--23
+\JY1/mc/m/n/12 のポ ート \OT1/txr/m/n/12 1 \JY1/mc/m/n/12 を接続する 。 入力側
+のコモンモ ード電流を低減させるために 、 同軸ケ ー
+ []
+
+[7
+
+]
+Overfull \hbox (48.13875pt too wide) in paragraph at lines 24--25
+[]\OT1/txr/m/n/12 AC \JY1/mc/m/n/12 アダプタの出力側は銅板を介して \OT1/txr/m/n
+/12 1 \JY1/mc/m/n/12 線ずつ 、 \OT1/txr/m/n/12 2 \JY1/mc/m/n/12 つの \OT1/txr/m
+/n/12 BI-AS-TEE(Picosecond MODEL5545)
+ []
+
+
+Overfull \hbox (0.28262pt too wide) in paragraph at lines 101--102
+\JY1/mc/m/n/12 トランスを介してマイコンに接続していて 、 また別のパルストランス
+を介し
+ []
+
+[8]
+Overfull \hbox (1.08719pt too wide) in paragraph at lines 114--115
+[]\JY1/mc/m/n/12 高さについて 、 伝送特性を安定させるため 、 \OT1/txr/m/n/12 DC
+ \JY1/mc/m/n/12 電源 、 電源ケ ーブル 、 \OT1/txr/m/n/12 BI-AS-TEE\JY1/mc/m/n/1
+2 、
+ []
+
+) [9]
+第{4}章.
+(./400_tokutei/tokutei.tex [10
+
+]) [11]
+第{5}章.
+[12
+
+]
+第{6}章.
+(./900_furoku/furoku.tex [13
+
+]) (./bib.tex [14]
+Underfull \hbox (badness 1281) in paragraph at lines 4--5
+[]\JY1/mc/m/n/12 藤城義和\OT1/txr/m/n/12 , S \JY1/mc/m/n/12 パラメ ータによる電
+子部品の評価 第 \OT1/txr/m/n/12 4 \JY1/mc/m/n/12 回 モ ード変換 \OT1/txr/m/n/12
+ ,TDK,
+ []
+
+) AED kuee: Processing end Figures and Tables [15
+
+] (./middle.fff
+File: ./fig/net.eps Graphic file (type eps)
+
+<./fig/net.eps>
+Overfull \hbox (27.66556pt too wide) in paragraph at lines 8--9
+ [] 
+ []
+
+[16]
+File: ./fig/hub_port.eps Graphic file (type eps)
+ <./fig/hub_port.eps>
+Overfull \hbox (220.7971pt too wide) in paragraph at lines 23--24
+ [] 
+ []
+
+[17]
+File: ./fig/acput.eps Graphic file (type eps)
+ <./fig/acput.eps>
+Overfull \hbox (2.79134pt too wide) in paragraph at lines 38--39
+ [] 
+ []
+
+File: ./fig/Scc11a.eps Graphic file (type eps)
+<./fig/Scc11a.eps>
+File: ./fig/Scc21a.eps Graphic file (type eps)
+ <./fig/Scc21a.eps>
+File: ./fig/Scd21a.eps Graphic file (type eps)
+ <./fig/Scd21a.eps>
+File: ./fig/Sdc21a.eps Graphic file (type eps)
+ <./fig/Sdc21a.eps>
+File: ./fig/Sdd11a.eps Graphic file (type eps)
+
+<./fig/Sdd11a.eps>
+File: ./fig/Sdd21a.eps Graphic file (type eps)
+ <./fig/Sdd21a.eps>
+File: ./fig/Sdd11s.eps Graphic file (type eps)
+ <./fig/Sdd11s.eps>
+File: ./fig/Sdd21s.eps Graphic file (type eps)
+ <./fig/Sdd21s.eps>
+File: ./fig/R_SCS.eps Graphic file (type eps)
+
+<./fig/R_SCS.eps>
+File: ./fig/AC_R_COMP_SDS.eps Graphic file (type eps)
+ <./fig/AC_R_COMP_SDS.eps> [18
+
+
+
+] [19] [20] [21]
+File: ./fig/hubnaibu.eps Graphic file (type eps)
+
+<./fig/hubnaibu.eps>
+File: ./fig/1127hub22.eps Graphic file (type eps)
+ <./fig/1127hub22.eps> [22]
+File: ./fig/com.eps Graphic file (type eps)
+ <./fig/com.eps>
+File: ./fig/dif.eps Graphic file (type eps)
+
+<./fig/dif.eps> [23]) (./middle.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2972 strings out of 493813
+ 36048 string characters out of 6153871
+ 94488 words of memory out of 5000000
+ 6332 multiletter control sequences out of 15000+600000
+ 38688 words of font info for 123 fonts, out of 8000000 for 9000
+ 929 hyphenation exceptions out of 8191
+ 28i,17n,24p,560b,442s stack positions out of 5000i,500n,10000p,500000b,80000s
+
+Output written on middle.dvi (26 pages, 55324 bytes).
